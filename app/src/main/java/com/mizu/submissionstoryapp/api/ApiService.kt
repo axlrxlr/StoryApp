@@ -28,7 +28,7 @@ interface ApiService {
         @Header("Authorization") token : String,
         @Query("page") page: Int,
         @Query("size") size: Int
-    ): Call<ListStoryResponse>
+    ): ListStoryResponse
 
     @Multipart
     @POST("stories")
