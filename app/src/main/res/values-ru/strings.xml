@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Story App</string>
+
+    <string name="input_pass">Введите ваш пароль</string>
+    <string name="login">Войти</string>
+    <string name="register">Зарегистрироваться</string>
+    <string name="email">Email</string>
+    <string name="username">Имя</string>
+    <string name="password">Пароль</string>
+    <string name="log_out">Выйти</string>
+    <string name="upload">Загрузить</string>
+    <string name="password_error_message">Пароль должен содержать не менее 8 символов</string>
+    <string name="email_error_message">Неверный формат email</string>
+    <string name="input_email">Введите ваш email</string>
+    <string name="app_desc">Добро пожаловать в Story App, где публикуются истории. Вы также можете опубликовать свои истории здесь.</string>
+    <string name="login_desc">Пожалуйста, введите данные вашей учетной записи для доступа к аккаунту.</string>
+    <string name="register_desc">Добро пожаловать в Story App. Давайте создадим вашу учетную запись для начала публикации историй.</string>
+    <string name="register_link"><u>Ещё нет аккаунта? Зарегистрируйтесь здесь.</u></string>
+    <string name="login_link"><u>Уже есть аккаунт? Войдите здесь.</u></string>
+    <string name="input_name">Введите ваше имя</string>
+    <string name="login_error">Введены неверные данные.</string>
+    <string name="reload">Перезагрузить</string>
+    <string name="logout">Выйти</string>
+    <string name="log_out_validation">Вы уверены, что хотите выйти из аккаунта?</string>
+    <string name="exit_validation">Вы собираетесь выйти из приложения.</string>
+    <string name="exit_app">Выйти из приложения</string>
+    <string name="btn_ok">ОК</string>
+    <string name="cancel">Отмена</string>
+    <string name="btn_yes">Да</string>
+    <string name="btn_no">Нет</string>
+    <string name="login_cancel_desc">Вы уверены, что хотите отменить процесс входа? Все внесенные изменения будут потеряны.</string>
+    <string name="regis_cancel_desc">Вы уверены, что хотите отменить процесс регистрации? Все внесенные изменения будут потеряны.</string>
+    <string name="login_cancel">Отменить вход</string>
+    <string name="regis_cancel">Отменить регистрацию</string>
+    <string name="register_success">Регистрация успешна</string>
+    <string name="register_success_desc">Ваша новая учетная запись была успешно создана. Пожалуйста, выполните вход.</string>
+    <string name="cancel_story">Отменить добавление истории?</string>
+    <string name="cancel_story_desc">Вы уверены, что хотите отменить добавление истории?</string>
+    <string name="pass_mismatch">Пароли не совпадают!</string>
+    <string name="register_error">Введены неверные или пустые данные. Пожалуйста, проверьте ещё раз.</string>
+    <string name="name_empty">Имя не может быть пустым.</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="take_photo">Сделать фото</string>
+    <string name="user_not_found">Пользователь не найден.</string>
+    <string name="email_taken">Email уже используется другой учетной записью.</string>
+    <string name="write_caption">Напишите подпись к вашему посту здесь…</string>
+    <string name="post_story">Опубликовать историю</string>
+    <string name="discard">Отменить</string>
+    <string name="discard_desc">Вернуться к камере и отменить фото?</string>
+    <string name="capture_success">Фото успешно сделано</string>
+    <string name="capture_failed">Не удалось сделать фото</string>
+    <string name="camera_failed">Не удалось запустить камеру</string>
+    <string name="no_permit">Не удалось получить разрешение.</string>
+    <string name="localization">Настройки локализации</string>
+    <string name="btn_continue">Продолжить</string>
+    <string name="btn_cancel">Отмена</string>
+    <string name="device_setting">Открыть настройки устройства</string>
+    <string name="device_setting_validation">Вы собираетесь открыть настройки устройства.</string>
+    <string name="desc_empty">Комментарий не может быть пустым.</string>
+
+</resources>
