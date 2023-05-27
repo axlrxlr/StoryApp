@@ -57,5 +57,6 @@
     <string name="device_setting">Open Device Setting</string>
     <string name="device_setting_validation">You are about to open your device setting.</string>
     <string name="desc_empty">Caption cannot be empty.</string>
-    <string name="refresh_button">Refresh Button</string>
+    <string name="refresh_button" translatable="false">Refresh Button</string>
+    <string name="title_activity_maps" translatable="false">MapsActivity</string>
 </resources>

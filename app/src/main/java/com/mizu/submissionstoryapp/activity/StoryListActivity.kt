@@ -13,7 +13,6 @@ import android.text.style.ForegroundColorSpan
 import android.view.ContextThemeWrapper
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -77,7 +76,10 @@ class StoryListActivity : AppCompatActivity() {
         when (item.itemId) {
             R.id.action_reload -> {
                 // Handle reload button click
-                setStoryList(token)
+                //setStoryList(token)
+
+                val maps = Intent(this@StoryListActivity, MapsActivity::class.java)
+                startActivity(maps)
                 return true
             }
             R.id.action_logout -> {
