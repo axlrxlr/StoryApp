@@ -79,6 +79,7 @@ class StoryListActivity : AppCompatActivity() {
                 //setStoryList(token)
 
                 val maps = Intent(this@StoryListActivity, MapsActivity::class.java)
+                maps.putExtra(USER_TOKEN, token)
                 startActivity(maps)
                 return true
             }

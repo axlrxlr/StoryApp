@@ -30,6 +30,13 @@ interface ApiService {
         @Query("size") size: Int
     ): ListStoryResponse
 
+    @GET("stories")
+    fun getStoriesWithLoc(
+        @Header("Authorization") token : String,
+        @Query("location") loc: Int
+    ): Call<ListStoryResponse>
+
+
     @Multipart
     @POST("stories")
     fun postStory(

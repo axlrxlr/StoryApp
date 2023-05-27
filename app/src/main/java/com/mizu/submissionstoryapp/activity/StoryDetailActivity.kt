@@ -8,6 +8,9 @@ import android.text.style.ForegroundColorSpan
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DecodeFormat
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
 import com.mizu.submissionstoryapp.R
 import com.mizu.submissionstoryapp.databinding.ActivityStoryDetailBinding
 
@@ -19,7 +22,8 @@ class StoryDetailActivity : AppCompatActivity() {
         const val EXTRA_NAME = "extra_name"
         const val EXTRA_PHOTO = "extra_photo"
         const val EXTRA_DESC = "extra_desc"
-
+        const val EXTRA_LAT = "extra_lat"
+        const val EXTRA_LON = "extra_lon"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +35,7 @@ class StoryDetailActivity : AppCompatActivity() {
         val name = fullName.split(" ")[0]
         val photoUrl = intent.getStringExtra(EXTRA_PHOTO).toString().trim()
         val description = intent.getStringExtra(EXTRA_DESC).toString().trim()
+
 
         val titleColor = ContextCompat.getColor(this, R.color.black)
         val title = SpannableString("$name's Post")
@@ -45,7 +50,10 @@ class StoryDetailActivity : AppCompatActivity() {
 
         binding.tvPostName.text = fullName
         binding.tvPostDescription.text = description
+
+
     }
+
 
 
 }
