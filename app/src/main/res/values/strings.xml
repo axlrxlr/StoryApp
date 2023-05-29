@@ -57,10 +57,13 @@
     <string name="device_setting">Open Device Setting</string>
     <string name="device_setting_validation">You are about to open your device setting.</string>
     <string name="desc_empty">Caption cannot be empty.</string>
-    <string name="refresh_button" translatable="false">Refresh Button</string>
-    <string name="title_activity_maps" translatable="false">MapsActivity</string>
+    <string name="refresh_button">Refresh Button</string>
+    <string name="title_activity_maps">Maps</string>
     <string name="normal_type">Normal</string>
     <string name="satellite_type">Satellite</string>
     <string name="terrain_type">Terrain</string>
     <string name="hybrid_type">Hybrid</string>
+    <string name="date_created">Posted at</string>
+    <string name="date_format">MMMM dd, yyyy</string>
+    <string name="no_location">No Location Provided</string>
 </resources>

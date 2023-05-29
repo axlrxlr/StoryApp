@@ -43,7 +43,7 @@
     <string name="take_photo">사진 촬영</string>
     <string name="user_not_found">사용자를 찾을 수 없습니다.</string>
     <string name="email_taken">해당 이메일은 다른 계정에서 사용 중입니다.</string>
-    <string name="write_caption">게시물 캡션을 입력하세요...</string>
+    <string name="write_caption">게시물 캡션을 입력하세요…</string>
     <string name="post_story">스토리 게시</string>
     <string name="discard">취소</string>
     <string name="discard_desc">카메라로 돌아가 사진을 취소하시겠습니까?</string>
@@ -57,4 +57,14 @@
     <string name="device_setting">기기 설정 열기</string>
     <string name="device_setting_validation">기기 설정을 열려고 합니다.</string>
     <string name="desc_empty">캡션을 비워둘 수 없습니다.</string>
+    <string name="refresh_button">Refresh Button</string>
+    <string name="title_activity_maps">"지도 "</string>
+    <string name="normal_type">일반</string>
+    <string name="satellite_type">위성</string>
+    <string name="terrain_type">지형</string>
+    <string name="hybrid_type">하이브리드</string>
+    <string name="no_location">위치 제공되지 않음</string>
+
+    <string name="date_created">게시 일시:</string>
+    <string name="date_format">%Y년 %m월 %d일</string>
 </resources>

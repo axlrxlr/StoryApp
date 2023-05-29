@@ -58,5 +58,15 @@
     <string name="device_setting">Открыть настройки устройства</string>
     <string name="device_setting_validation">Вы собираетесь открыть настройки устройства.</string>
     <string name="desc_empty">Комментарий не может быть пустым.</string>
+    <string name="refresh_button">Refresh Button</string>
+    <string name="title_activity_maps">Карты</string>
+    <string name="normal_type">Обычный</string>
+    <string name="satellite_type">Спутник</string>
+    <string name="terrain_type">"Местность "</string>
+    <string name="hybrid_type">Гибридный</string>
+    <string name="no_location">Местоположение не указано</string>
+
+    <string name="date_created">Опубликовано:</string>
+    <string name="date_format">%d %B %Y г.</string>
 
 </resources>

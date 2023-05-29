@@ -57,4 +57,15 @@
     <string name="device_setting">Buka Pengaturan Perangkat</string>
     <string name="device_setting_validation">Anda akan membuka pengaturan perangkat.</string>
     <string name="desc_empty">Deskripsi tidak boleh kosong.</string>
+    <string name="refresh_button">Refresh Button</string>
+    <string name="title_activity_maps">Peta</string>
+    <string name="normal_type">Normal</string>
+    <string name="satellite_type">Satelit</string>
+    <string name="terrain_type">Medan</string>
+    <string name="hybrid_type">Hibrida</string>
+    <string name="no_location">Lokasi Tidak Disediakan</string>
+
+
+    <string name="date_created">Diposting pada</string>
+    <string name="date_format">%d %B %Y</string>
 </resources>

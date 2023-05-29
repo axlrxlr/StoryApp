@@ -186,6 +186,9 @@ class StoryListActivity : AppCompatActivity() {
                     moveToDetail.putExtra(StoryDetailActivity.EXTRA_NAME, data.name)
                     moveToDetail.putExtra(StoryDetailActivity.EXTRA_PHOTO, data.photoUrl)
                     moveToDetail.putExtra(StoryDetailActivity.EXTRA_DESC, data.description)
+                    moveToDetail.putExtra(StoryDetailActivity.EXTRA_TIME, data.createdAt)
+                    moveToDetail.putExtra(StoryDetailActivity.EXTRA_LAT, data.lat)
+                    moveToDetail.putExtra(StoryDetailActivity.EXTRA_LON, data.lon)
                     startActivity(moveToDetail)
                 }
             })

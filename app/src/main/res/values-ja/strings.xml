@@ -43,7 +43,7 @@
     <string name="take_photo">写真を撮る</string>
     <string name="user_not_found">ユーザーが見つかりません。</string>
     <string name="email_taken">このメールアドレスは別のアカウントで使用されています。</string>
-    <string name="write_caption">ここに投稿のキャプションを書いてください...</string>
+    <string name="write_caption">ここに投稿のキャプションを書いてください…</string>
     <string name="post_story">ストーリーを投稿する</string>
     <string name="discard">破棄</string>
     <string name="discard_desc">カメラに戻り、写真を破棄しますか？</string>
@@ -57,5 +57,14 @@
     <string name="device_setting">デバイス設定を開く</string>
     <string name="device_setting_validation">デバイスの設定を開こうとしています。</string>
     <string name="desc_empty">キャプションは空にできません。</string>
+    <string name="refresh_button">Refresh Button</string>
+    <string name="title_activity_maps">地図</string>
+    <string name="normal_type">通常</string>
+    <string name="satellite_type">衛星</string>
+    <string name="terrain_type">地形</string>
+    <string name="hybrid_type">ハイブリッド</string>
+    <string name="no_location">場所が提供されていません</string>
 
+    <string name="date_created">投稿日時:</string>
+    <string name="date_format">%Y年%m月%d日</string>
 </resources>
