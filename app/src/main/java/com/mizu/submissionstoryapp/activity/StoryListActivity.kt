@@ -75,9 +75,10 @@ class StoryListActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.action_reload -> {
-                // Handle reload button click
-                //setStoryList(token)
-
+                setStoryList(token)
+                return true
+            }
+            R.id.action_map -> {
                 val maps = Intent(this@StoryListActivity, MapsActivity::class.java)
                 maps.putExtra(USER_TOKEN, token)
                 startActivity(maps)

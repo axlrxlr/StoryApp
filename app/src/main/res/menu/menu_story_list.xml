@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:id="@+id/action_map"
+        android:icon="@drawable/ic_maps"
+        android:title="@string/reload"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
+    <item
         android:id="@+id/action_reload"
         android:icon="@drawable/ic_reload"
         android:title="@string/reload"
@@ -12,11 +18,11 @@
         android:id="@+id/action_localization"
         android:icon="@drawable/ic_local"
         android:title="@string/localization"
-        app:showAsAction="always" />
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/action_logout"
         android:icon="@drawable/ic_logout"
         android:title="@string/logout"
-        app:showAsAction="always" />
+        app:showAsAction="never" />
 </menu>

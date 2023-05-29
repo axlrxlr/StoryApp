@@ -51,7 +51,7 @@
     <string name="capture_failed">Gagal mengambil foto</string>
     <string name="camera_failed">Gagal membuka kamera</string>
     <string name="no_permit">Tidak mendapatkan permission.</string>
-    <string name="localization">Pengaturan Lokal</string>
+    <string name="localization">Ganti Bahasa</string>
     <string name="btn_continue">Lanjut</string>
     <string name="btn_cancel">Batal</string>
     <string name="device_setting">Buka Pengaturan Perangkat</string>

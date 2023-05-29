@@ -7,7 +7,6 @@ import androidx.paging.PagingData
 import androidx.paging.liveData
 import com.mizu.submissionstoryapp.api.ApiService
 import com.mizu.submissionstoryapp.api.ListStoryItem
-import com.mizu.submissionstoryapp.api.ListStoryResponse
 
 class StoryRepository (private val apiService: ApiService) {
     fun getAllStory(token: String): LiveData<PagingData<ListStoryItem>> {

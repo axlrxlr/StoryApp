@@ -51,7 +51,7 @@
     <string name="capture_failed">Failed to capture photo</string>
     <string name="camera_failed">Failed to launch camera</string>
     <string name="no_permit">Did not get permission.</string>
-    <string name="localization">Localization Setting</string>
+    <string name="localization">Change Language</string>
     <string name="btn_continue">Continue</string>
     <string name="btn_cancel">Cancel</string>
     <string name="device_setting">Open Device Setting</string>
