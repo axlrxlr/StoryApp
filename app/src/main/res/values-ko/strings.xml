@@ -64,6 +64,7 @@
     <string name="terrain_type">지형</string>
     <string name="hybrid_type">하이브리드</string>
     <string name="no_location">위치 제공되지 않음</string>
+    <string name="include_location">당신의 위치를 포함하세요</string>
 
     <string name="date_created">게시 일시:</string>
     <string name="date_format">%Y년 %m월 %d일</string>

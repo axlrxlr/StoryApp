@@ -64,7 +64,7 @@
     <string name="terrain_type">Medan</string>
     <string name="hybrid_type">Hibrida</string>
     <string name="no_location">Lokasi Tidak Disediakan</string>
-
+    <string name="include_location">Sertakan lokasi Anda</string>
 
     <string name="date_created">Diposting pada</string>
     <string name="date_format">%d %B %Y</string>

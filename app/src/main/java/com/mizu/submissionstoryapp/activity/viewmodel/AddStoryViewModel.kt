@@ -36,7 +36,8 @@ class AddStoryViewModel: ViewModel() {
             ) {
                 _isLoading.value = false
                 if (response.isSuccessful && response.body() != null){
-                 _postResult.value = response.body()
+                    _postResult.value = response.body()
+                    Log.d(TAG, response.toString())
                 }else{
                     Log.e(TAG, "onFailure: ${response.code()} ${response.message()}")
                     Log.e(TAG, "onFailure: ${response.errorBody()?.string()}")
@@ -51,5 +52,34 @@ class AddStoryViewModel: ViewModel() {
         })
 
     }
+
+    fun postStoryWithLoc(token: String, photo: MultipartBody.Part, description: RequestBody, lat: Float, lon: Float){
+
+        _isLoading.value = true
+        val client = ApiConfig.getApiService().postStoryWithLoc(token, photo, description, lat, lon)
+        client.enqueue(object: Callback<RegisterResponse> {
+            override fun onResponse(
+                call: Call<RegisterResponse>,
+                response: Response<RegisterResponse>
+            ) {
+                _isLoading.value = false
+                if (response.isSuccessful && response.body() != null){
+                    _postResult.value = response.body()
+                    Log.d(TAG, response.toString())
+                }else{
+                    Log.e(TAG, "onFailure: ${response.code()} ${response.message()}")
+                    Log.e(TAG, "onFailure: ${response.errorBody()?.string()}")
+                }
+            }
+
+            override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
+                _isLoading.value = false
+                Log.e(TAG, "onFailure: ${t.message.toString()}")
+            }
+
+        })
+
+    }
+
 
 }

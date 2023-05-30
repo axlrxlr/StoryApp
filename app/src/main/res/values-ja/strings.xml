@@ -64,6 +64,7 @@
     <string name="terrain_type">地形</string>
     <string name="hybrid_type">ハイブリッド</string>
     <string name="no_location">場所が提供されていません</string>
+    <string name="include_location">あなたの場所を含める</string>
 
     <string name="date_created">投稿日時:</string>
     <string name="date_format">%Y年%m月%d日</string>

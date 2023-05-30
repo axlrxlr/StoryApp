@@ -65,6 +65,7 @@
     <string name="terrain_type">"Местность "</string>
     <string name="hybrid_type">Гибридный</string>
     <string name="no_location">Местоположение не указано</string>
+    <string name="include_location">Укажите ваше местоположение</string>
 
     <string name="date_created">Опубликовано:</string>
     <string name="date_format">%d %B %Y г.</string>

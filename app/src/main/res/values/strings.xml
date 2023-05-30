@@ -66,4 +66,5 @@
     <string name="date_created">Posted at</string>
     <string name="date_format">MMMM dd, yyyy</string>
     <string name="no_location">No Location Provided</string>
+    <string name="include_location">Include your location</string>
 </resources>

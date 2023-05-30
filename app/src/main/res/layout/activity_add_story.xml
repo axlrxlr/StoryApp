@@ -39,19 +39,15 @@
     </androidx.cardview.widget.CardView>
 
 
-
-
     <Button
         android:id="@+id/btn_upload"
         style="@style/Button.StoryApp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="80dp"
         android:text="@string/upload"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_description" />
@@ -60,9 +56,8 @@
     <EditText
         android:id="@+id/et_description"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="150dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/background_edit_text"
         android:ems="10"
@@ -70,10 +65,19 @@
         android:hint="@string/write_caption"
         android:inputType="textMultiLine"
         android:padding="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_upload"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cv_photo_view"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox_location"
         tools:ignore="Autofill,LabelFor" />
+
+    <CheckBox
+        android:id="@+id/checkbox_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="@string/include_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_photo_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

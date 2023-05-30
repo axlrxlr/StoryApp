@@ -17,7 +17,6 @@ import com.mizu.submissionstoryapp.paging.StoryRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
-import org.junit.Assert
 import org.junit.Assert.*
 import org.junit.Rule
 import org.junit.Test
@@ -78,7 +77,7 @@ class StoryListViewModelTest {
             workerDispatcher = Dispatchers.Main,
         )
         differ.submitData(actualQuote)
-        Assert.assertEquals(0, differ.snapshot().size)
+        assertEquals(0, differ.snapshot().size)
     }
 }
 

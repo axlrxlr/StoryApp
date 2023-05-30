@@ -45,4 +45,14 @@ interface ApiService {
         @Part("description") description : RequestBody
     ): Call<RegisterResponse>
 
+    @Multipart
+    @POST("stories")
+    fun postStoryWithLoc(
+        @Header("Authorization") token : String,
+        @Part photo: MultipartBody.Part,
+        @Part("description") description : RequestBody,
+        @Part("lat") lat: Float,
+        @Part("lon") lon: Float,
+    ): Call<RegisterResponse>
+
 }

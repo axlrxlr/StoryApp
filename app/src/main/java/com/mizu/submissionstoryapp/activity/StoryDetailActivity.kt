@@ -54,7 +54,6 @@ class StoryDetailActivity : AppCompatActivity(), OnMapReadyCallback {
 
         Glide.with(this@StoryDetailActivity)
             .load(photoUrl)
-            .centerCrop()
             .format(DecodeFormat.PREFER_RGB_565)
             .into(binding.ivPhotoDetail)
 

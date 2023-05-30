@@ -1,10 +1,13 @@
 package com.mizu.submissionstoryapp.activity
 
+import android.Manifest
 import android.app.AlertDialog
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Matrix
+import android.location.Location
 import android.os.Build
 import android.os.Bundle
 import android.text.Spannable
@@ -12,10 +15,14 @@ import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.view.ContextThemeWrapper
 import android.view.View
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.exifinterface.media.ExifInterface
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationServices
 import com.mizu.submissionstoryapp.R
 import com.mizu.submissionstoryapp.activity.viewmodel.AddStoryViewModel
 import com.mizu.submissionstoryapp.databinding.ActivityAddStoryBinding
@@ -34,7 +41,13 @@ class AddStoryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddStoryBinding
     private var getFile: File? = null
     private lateinit var token: String
+    private var locationShared: Boolean = false
+    private lateinit var location: Location
+    private var lat: Float = 0.0f
+    private var lon: Float = 0.0f
+
     private val viewModel by viewModels<AddStoryViewModel>()
+    private lateinit var fusedLocationClient: FusedLocationProviderClient
 
     companion object{
 
@@ -53,6 +66,17 @@ class AddStoryActivity : AppCompatActivity() {
         val title = SpannableString(getString(R.string.post_story))
         title.setSpan(ForegroundColorSpan(titleColor), 0, title.length, Spannable.SPAN_INCLUSIVE_INCLUSIVE)
         supportActionBar?.title = title
+
+
+
+        binding.checkboxLocation.setOnCheckedChangeListener { _, isChecked ->
+            locationShared = isChecked
+        }
+
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+        getMyLastLocation()
+
+
 
         val myFile = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             intent.getSerializableExtra("picture", File::class.java)
@@ -113,6 +137,7 @@ class AddStoryActivity : AppCompatActivity() {
 
     }
 
+
     private fun showLoading(it: Boolean) {
         if (it) {
             binding.btnUpload.setBackgroundColor(resources.getColor(R.color.light_grey))
@@ -152,6 +177,9 @@ class AddStoryActivity : AppCompatActivity() {
                 file.name,
                 requestImageFile
             )
+
+            lat = location.latitude.toFloat()
+            lon = location.longitude.toFloat()
             if (descText.isEmpty()){
                 AlertDialog.Builder(ContextThemeWrapper(this, R.style.CustomAlertDialogStyle))
                     .setTitle("Error")
@@ -161,8 +189,64 @@ class AddStoryActivity : AppCompatActivity() {
                     }
                     .show()
             }else {
-                viewModel.postStory(token, imageMultipart, description)
+                if (!locationShared) {
+                    viewModel.postStory(token, imageMultipart, description)
+                }else{
+                    viewModel.postStoryWithLoc(token, imageMultipart, description, lat, lon)
+                }
             }
+        }
+    }
+
+
+    private fun checkPermission(permission: String): Boolean {
+        return ContextCompat.checkSelfPermission(
+            this,
+            permission
+        ) == PackageManager.PERMISSION_GRANTED
+    }
+
+    private val requestPermissionLauncher =
+        registerForActivityResult(
+            ActivityResultContracts.RequestMultiplePermissions()
+        ) { permissions ->
+            when {
+                permissions[Manifest.permission.ACCESS_FINE_LOCATION] ?: false -> {
+                    // Precise location access granted.
+                    getMyLastLocation()
+                }
+                permissions[Manifest.permission.ACCESS_COARSE_LOCATION] ?: false -> {
+                    // Only approximate location access granted.
+                    getMyLastLocation()
+                }
+                else -> {
+                    // No location access granted.
+                }
+            }
+        }
+
+    private fun getMyLastLocation() {
+        if     (checkPermission(Manifest.permission.ACCESS_FINE_LOCATION) &&
+            checkPermission(Manifest.permission.ACCESS_COARSE_LOCATION)
+        ){
+            fusedLocationClient.lastLocation.addOnSuccessListener { loc: Location? ->
+                if (loc != null) {
+                    location = loc
+                } else {
+                    Toast.makeText(
+                        this@AddStoryActivity,
+                        "Location is not found. Try Again",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+        } else {
+            requestPermissionLauncher.launch(
+                arrayOf(
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+                )
+            )
         }
     }
 }
