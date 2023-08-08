@@ -1,4 +1,4 @@
-![Screenshot_2023-06-20-05-00-21-824_com mizu submissionstoryapp](https://github.com/axlrxlr/StoryApp/assets/125959065/1a7bb5ef-3563-4062-b0af-895e3b72a070)# Story App
+# Story App
 This is a submission project I created to complete Dicoding Android Intermediate Course. Story App is an application that shows picture people share. As a user, you can create an account or log into an existing account. Once you're in, the app will show the latest numbers of picture people posted on the app in a list of cards. Clicking the post will direct you to the post detail (uploader and post caption) and even show the location where that picture is uploaded from if it's available. You can also post your own picture from your gallery or capture it with the app's camera feature and write a caption for it. Before posting the picture, you will be able to choose whether you want to share your location or not. As for the data, I used API Service that Dicoding provided.
 
 ---
