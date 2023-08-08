@@ -29,3 +29,7 @@ This is a submission project I created to complete Dicoding Android Intermediate
 
 ## External Resource
 - **[Dicoding Story API](https://story-api.dicoding.dev/v1/)**
+
+## Project File Requirement
+1. Android Studio Electric Eel // 2022.1.1
+2. Android Device or Android Emulator
