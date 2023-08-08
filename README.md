@@ -10,10 +10,7 @@ This is a submission project I created to complete Dicoding Android Intermediate
 - **Camera**
 - **Maps**
 
----
-
 ## Application Snapshots
-
 <img src="https://github.com/axlrxlr/SubmissionStoryApp/assets/125959065/842b056e-6009-4c5f-95ec-b6b1ca94b2b1" width="150" alt="Screenshot 1">
 <img src="https://github.com/axlrxlr/SubmissionStoryApp/assets/125959065/6693d550-e7f4-4e54-801a-2b0a27a900f9" width="150" alt="Screenshot 2">
 <img src="https://github.com/axlrxlr/SubmissionStoryApp/assets/125959065/e1676f26-bb50-4e21-8f4f-f4616557b395" width="150" alt="Screenshot 3">
